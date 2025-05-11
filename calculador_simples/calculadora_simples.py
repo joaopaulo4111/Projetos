@@ -1,5 +1,5 @@
-print("Cauculadora de 6 operações!")
-x = int(input("Escolha sua operação!\ndigite 1 para soma, 2 para subtração, 3 para divisão, 4 para multiplicação e 5 para raiz quadrada, 6 para potêntia.\n "))
+print("Cauculadora de 7 operações!")
+x = int(input("Escolha sua operação!\ndigite 1 para soma, 2 para subtração, 3 para divisão, 4 para multiplicação e 5 para raiz quadrada, 6 para potêntia, 7 para logaritimo. \n "))
 
 if (x==1):
     a =  float(input("informe o primeiro número:"))
@@ -30,5 +30,14 @@ elif(x==6):
     p = float(input("informe o número da elevação:"))
     q= o**p
     print("o resultado da potenciação é:","%.2f"%q)
+elif(x==7):
+    import math
+    def log_base_personalizado(x, base):
+        return math.log(x) / math.log(base)
+    numero = float(input("o numero: "))
+    base = float(input("na base: "))
+    resultado = log_base_personalizado(numero, base)
+
+    print(f"Logaritmo de {numero} na base {base} é: {resultado}")
 else:
     print("ainda não tem mais operação")
